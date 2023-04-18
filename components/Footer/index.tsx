@@ -12,24 +12,31 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
-                  <Image
-                    src="images/logo/logo-2.svg"
-                    alt="logo"
-                    className="w-full dark:hidden"
-                    width={140}
-                    height={30}
-                  />
-                  <Image
-                    src="images/logo/logo.svg"
-                    alt="logo"
-                    className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
-                  />
-                </Link>
+                <div className="ml-16 w-24 max-w-full px-4 xl:mr-12">
+                  <Link
+                    href="/"
+                    className={`header-logo flex w-full flex-row items-center justify-center `}
+                  >
+                    <Image
+                      src="/images/logo/crow.png"
+                      alt="logo"
+                      width={1024}
+                      height={1024}
+                      className="w-full dark:hidden"
+                    />
+                    <Image
+                      src="/images/logo/crow.png"
+                      alt="logo"
+                      width={140}
+                      height={30}
+                      className="hidden w-full dark:block"
+                    />
+                    <h1 className="text-4xl font-bold ">Scavenger</h1>
+                  </Link>
+                </div>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                  Our objective is to help freelance web developers find clients and sell websites.
+                  Our objective is to help freelance web developers find clients
+                  and sell websites.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -204,7 +211,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="absolute right-0 top-14 z-[-1]">
           <svg
             width="55"
@@ -279,7 +286,7 @@ const Footer = () => {
             </defs>
           </svg>
         </div>
-        <div className="absolute left-0 bottom-24 z-[-1]">
+        <div className="absolute bottom-24 left-0 z-[-1]">
           <svg
             width="79"
             height="94"
