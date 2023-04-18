@@ -67,7 +67,7 @@ const Header = () => {
                   height={30}
                   className="hidden w-full dark:block"
                 />
-                <h1 className="text-4xl font-bold hidden md:block">Scavenger</h1>
+                <h1 className="text-4xl text-white font-bold hidden md:block">Scavenger</h1>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -82,7 +82,6 @@ const Header = () => {
                   Sign Up
                 </Link>
                 <div>
-                  <ThemeToggler />
                 </div>
               </div>
             </div>
