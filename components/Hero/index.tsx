@@ -15,6 +15,7 @@ const Hero = () => {
     const userDoc = await getDoc(userRef);
     const newEmails = [...userDoc.data().emails, email]; // add the new email to the existing emails
     await setDoc(userRef, { emails: newEmails }); // update the document with the new emails
+    window.location.reload();
   }
 
   return (
@@ -37,12 +38,14 @@ const Hero = () => {
                   The freelance gods are smiling upon you. Generate hundreds of leads in a matter of seconds, gather all relevant data, and manage the sales cycle completely in house. Book a demo to launch your freelance career.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <form className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0" onSubmit={uploadEmail}>
-                  <input value={email} onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email" className="rounded-md py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out dark:text-black dark:bg-white border-2 border-black" />
-                  <button type="submit" className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/30 dark:bg-black border-white border-2 dark:text-white dark:hover:bg-white/30">
+                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                  <input 
+                    onKeyDown={(e) => {if (e.key === "Enter") {uploadEmail()}}}
+                  value={email} onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email" className="rounded-md py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out dark:text-black dark:bg-white border-2 border-black" />
+                  <button onClick={uploadEmail} className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/30 dark:bg-black border-white border-2 dark:text-white dark:hover:bg-white/30">
                     Book my full demo
                   </button>
-                </form> 
+                </div>
                 </div>
               </div>
             </div>
