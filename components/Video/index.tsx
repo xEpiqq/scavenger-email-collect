@@ -13,12 +13,12 @@ const Video = () => {
   const [isOpen, setOpen] = useState(false);
   const [email, setEmail] = useState("");
 
-  async function uploadEmail() {
-    const userRef = doc(db, "scavenger-emails", "scavenger-emails");
-    const userDoc = await getDoc(userRef);
-    const newEmails = [...userDoc.data().emails, email]; // add the new email to the existing emails
-    await setDoc(userRef, { emails: newEmails }); // update the document with the new emails
-  }
+  // async function uploadEmail() {
+  //   const userRef = doc(db, "scavenger-emails", "scavenger-emails");
+  //   const userDoc = await getDoc(userRef);
+  //   const newEmails = [...userDoc.data().emails, email]; // add the new email to the existing emails
+  //   await setDoc(userRef, { emails: newEmails }); // update the document with the new emails
+  // }
 
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
@@ -68,12 +68,12 @@ const Video = () => {
         onClose={() => setOpen(false)}
       />
 
-                <form className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 m-16" onSubmit={uploadEmail}>
+                {/* <form className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 m-16" onSubmit={uploadEmail}>
                   <input value={email} onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email" className="rounded-md py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out dark:text-black dark:bg-white border-2 border-primary" />
                   <button type="submit" className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/30 dark:bg-primary dark:text-white dark:hover:bg-white/30">
                     Get early access!
                   </button>
-                </form> 
+                </form>  */}
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
         <img src="/images/video/shape.svg" alt="shape" className="w-full" />
