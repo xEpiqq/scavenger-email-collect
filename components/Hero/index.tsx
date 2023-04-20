@@ -1,10 +1,10 @@
 'use client'
 import Link from "next/link";
-import { useState } from "react";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
-import { app } from '../../components/initializeFirebase'
+// import { useState } from "react";
+// import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+// import { app } from '../../components/initializeFirebase'
 
-const db = getFirestore(app);
+// const db = getFirestore(app);
 
 const Hero = () => {
 

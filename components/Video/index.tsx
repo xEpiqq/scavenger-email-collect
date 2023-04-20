@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
-import { app } from '../../components/initializeFirebase'
+// import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+// import { app } from '../../components/initializeFirebase'
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import ModalVideo from "react-modal-video";
 
-const db = getFirestore(app);
+// const db = getFirestore(app);
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);

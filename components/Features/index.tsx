@@ -2,11 +2,11 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
-import { useState } from "react";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
-import { app } from '../../components/initializeFirebase'
+// import { useState } from "react";
+// import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+// import { app } from '../../components/initializeFirebase'
 
-const db = getFirestore(app);
+// const db = getFirestore(app);
 
 const Features = () => {
 
