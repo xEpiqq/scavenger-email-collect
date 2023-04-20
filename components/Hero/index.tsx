@@ -31,7 +31,7 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                Find Clients. <span className="text-black text-stroke text-stroke-black" >Sell</span> Websites.
+                Find Clients. <span className="text-black text-stroke text-stroke-black" >Sell</span> Websites. Ya
                 </h1>
                 <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
                   The freelance gods are smiling upon you. Generate hundreds of leads in a matter of seconds, gather all relevant data, and manage the sales cycle completely in house. Book a demo to launch your freelance career.
