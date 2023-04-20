@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
     ),
     title: "Crafted for freelancers",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "This tool changed the game for us, and we want to give back. From selling almost no sites to selling predictably, it will do the same for you.",
   },
   {
     id: 1,
@@ -29,7 +29,7 @@ const featuresData: Feature[] = [
     ),
     title: "Unlimited leads",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "No need to worry about lead quotas. Generate as many leads as necessary for you to begin securing clients—and then generate more.",
   },
   {
     id: 1,
@@ -44,7 +44,7 @@ const featuresData: Feature[] = [
     ),
     title: "Site-Specific Data",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Desktop and mobile screenshots, ssl certification status, what template service they are using, and more. Scavenger gives you an instant overview of potential selling points.",
   },
   {
     id: 1,
@@ -59,7 +59,7 @@ const featuresData: Feature[] = [
     ),
     title: "Lightweight CRM",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Our built in CRM allows you manage your leads without the headache of using external software. Scavenger is the all in one solution for selling websites.",
   },
   {
     id: 1,
@@ -74,7 +74,7 @@ const featuresData: Feature[] = [
     ),
     title: "Contact Information",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Scavenger generates all essential contact information for cold contacting. It finds phone numbers, emails, and all relevant social media links.",
   },
   {
     id: 1,
@@ -89,7 +89,7 @@ const featuresData: Feature[] = [
     ),
     title: "List Management",
     paragraph:
-      "Tuae nam ex similique incidunt expedita exerci tationem laudantium. Repellendus quisquam numquam perferendis earum sapiente non tempore? Fugit repellat ut maiores.",
+      "Our list management system simplifies–and gamifies–the process of selling. Lists exist in small, manageable, bite-sized chunks. It is easy to see your progress.",
   },
 ];
 export default featuresData;
