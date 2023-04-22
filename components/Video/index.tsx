@@ -14,10 +14,14 @@ const Video = () => {
   const [email, setEmail] = useState("");
 
   async function uploadEmail() {
+    if (!email) {
+      return;
+    }
     const userRef = doc(db, "scavenger-emails", "scavenger-emails");
     const userDoc = await getDoc(userRef);
     const newEmails = [...userDoc.data().emails, email]; // add the new email to the existing emails
     await setDoc(userRef, { emails: newEmails }); // update the document with the new emails
+    window.location.reload();
   }
 
   return (
@@ -68,12 +72,13 @@ const Video = () => {
         onClose={() => setOpen(false)}
       />
 
-                <form className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 m-16" onSubmit={uploadEmail}>
-                  <input value={email} onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email" className="rounded-md py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out dark:text-black dark:bg-white border-2 border-primary" />
-                  <button type="submit" className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/30 dark:bg-primary dark:text-white dark:hover:bg-white/30">
+                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 m-16" onSubmit={uploadEmail}>
+                  <input value={email} onKeyDown={(e) => {if (e.key === "Enter") {uploadEmail()}}}
+                  onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email" className="rounded-md py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out dark:text-white dark:bg-white border-2 border-primary" />
+                  <button onClick={uploadEmail} className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/30 dark:bg-primary dark:text-white dark:hover:bg-white/30">
                     Get early access!
                   </button>
-                </form> 
+                </div> 
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
         <img src="/images/video/shape.svg" alt="shape" className="w-full" />

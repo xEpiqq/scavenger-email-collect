@@ -40,7 +40,7 @@ const Header = () => {
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center bg-transparent ${
           sticky
-            ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-black dark:!bg-opacity-20"
+            ? "!fixed !z-[9999] !bg-black !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-black dark:!bg-opacity-20"
             : "absolute"
         }`}
       >
@@ -75,12 +75,17 @@ const Header = () => {
                 
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signup"
-                  className="ease-in-up hidden rounded-md bg-black px-8 py-3 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
+                <button
+                onClick={() => {
+                  const element = document.getElementById("signupform");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="ease-in-up hidden rounded-md bg-black px-8 py-3 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9 hover:bg-white hover:text-black"
                 >
                   Sign Up
-                </Link>
+                </button>
                 <div>
                 </div>
               </div>
