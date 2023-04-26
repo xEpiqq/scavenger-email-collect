@@ -47,7 +47,7 @@ const Features = () => {
           <input onKeyDown={(e) => {if (e.key === "Enter") {uploadEmail()}}}
           value={email} onChange={(e) => {setEmail(e.target.value)}} type="email" placeholder="Email" className="rounded-md py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out dark:text-black dark:bg-white border-2 border-primary" />
           <button onClick={uploadEmail} className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/30 dark:bg-primary dark:text-white dark:hover:bg-white/30">
-            Get the full demo!
+            Get Early Access!
           </button>
         </div> 
 
